@@ -1,7 +1,7 @@
 type t;
 type worker; 
 @module("mapbox-gl")
-external mapbox: t = ""
+external mapbox: t = "default"
 /**
 if you have some custom workerClass e.g: import workerClass from 'xyz', so
 ```rescript
