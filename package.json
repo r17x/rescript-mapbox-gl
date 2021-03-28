@@ -16,6 +16,8 @@
     "build": "bsb -make-world"
   },
   "devDependencies": {
-    "bs-platform": "9.0.2"
+    "@rescript/react": "0.10.1",
+    "bs-platform": "9.0.2",
+    "mapbox-gl": "2.2.0"
   }
 }
