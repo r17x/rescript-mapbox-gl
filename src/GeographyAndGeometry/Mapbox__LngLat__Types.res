@@ -18,3 +18,9 @@ type mercatorCoordinate = {
   y: float,
   z: float,
 }
+type edgeInsets = {
+  top: float,
+  bottom: float,
+  left: float,
+  right: float
+}
