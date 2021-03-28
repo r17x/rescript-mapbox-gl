@@ -24,6 +24,10 @@ Run the following in your favorit console:
 - [ ] [**Map**](https://docs.mapbox.com/mapbox-gl-js/api/map/) (🏗)
 - [ ] [**Properties and Options**](https://docs.mapbox.com/mapbox-gl-js/api/properties/) (🏗)
 - [ ] [**Markers and Control**](https://docs.mapbox.com/mapbox-gl-js/api/markers/) (🚧)
+  - [x] Marker instance member 
+  - [ ] Marker Event
+  - [x] Popup instance member 
+  - [ ] Popup Event
 - [ ] [**Geography and Geometry**](https://docs.mapbox.com/mapbox-gl-js/api/geography/) (🚧)
 - [ ] [**User interaction handlers**](https://docs.mapbox.com/mapbox-gl-js/api/handlers/) (🚧)
 - [ ] [**Sources**](https://docs.mapbox.com/mapbox-gl-js/api/sources/) (🚧)
