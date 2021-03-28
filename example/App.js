@@ -2,16 +2,37 @@
 'use strict';
 
 var MapboxGl = require("mapbox-gl");
-var Caml_external_polyfill = require("bs-platform/lib/js/caml_external_polyfill.js");
 
 var map = new MapboxGl.Map();
 
-var mapWithOpt = Caml_external_polyfill.resolve("Map")({
+var mapWithOpt = new MapboxGl.Map({
       container: "app-hash-in-dom"
     });
 
-console.log(map, mapWithOpt);
+var marker = new MapboxGl.Marker().setLngLat([
+        30.5,
+        50.5
+      ]).addTo(map);
+
+var lngLikeArr = [
+  30.5,
+  50.5
+];
+
+var lngLat = {
+  lng: 30.5,
+  lat: 50.5
+};
+
+var convertFromArr = MapboxGl.LngLat.convert(lngLikeArr);
+
+var convertFromLngLat = MapboxGl.LngLat.convert(lngLat);
 
 exports.map = map;
 exports.mapWithOpt = mapWithOpt;
+exports.marker = marker;
+exports.lngLikeArr = lngLikeArr;
+exports.lngLat = lngLat;
+exports.convertFromArr = convertFromArr;
+exports.convertFromLngLat = convertFromLngLat;
 /* map Not a pure module */
