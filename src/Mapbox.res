@@ -8,6 +8,7 @@ module LngLatBounds = Mapbox__LngLatBounds;
 module MercatorCoordinate = Mapbox__MercatorCoordinate;
 module Point = Mapbox__Point
 module PointLike = Mapbox__PointLike
+module Popup = Mapbox__Popup
 
 /** Map **/
 let map = Map.make
