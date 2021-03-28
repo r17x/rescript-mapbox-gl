@@ -1,5 +1,17 @@
 module LngLatLike = Mapbox__LngLatLike
 module Control = Mapbox__Control
+// @see https://docs.mapbox.com/mapbox-gl-js/api/map/#map-instance-members
+// TODO check instance member
+module InstanceMember = (
+  T: {
+    type t
+  },
+) => {
+  @send external addControl: (T.t, Control.t) => T.t = "addControl"
+  @send external addControlWithOptions: (T.t, Control.t, Control.position) => T.t = "addControl"
+  @send external remove: (T.t, unit) => unit = "remove"
+}
+
 type t
 type options
 type container
@@ -34,7 +46,6 @@ external makeOptions: (
 ) => options = ""
 @module("mapbox-gl") @new external make: unit => t = "Map"
 @module("mapbox-gl") @new external makeWithOptions: options => t = "Map"
-// instance member
-@send external remove: (t, unit) => unit = "remove"
-@send external addControl: (t, Control.t) => t = "addControl"
-@send external addControlWithOptions: (t, Control.t, Control.position) => t = "addControl"
+include InstanceMember({
+  type t = t
+})

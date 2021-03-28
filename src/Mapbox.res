@@ -10,6 +10,8 @@ module Point = Mapbox__Point
 module PointLike = Mapbox__PointLike
 module EdgeInsets = Mapbox__EdgeInsets
 module Popup = Mapbox__Popup
+module NavigationControl = Mapbox__NavigationControl
+module GeolocateControl = Mapbox__GeolocateControl
 
 /** Map **/
 let map = Map.make
