@@ -3,6 +3,7 @@ module LngLat = Mapbox__LngLat
 module LngLatLike = Mapbox__LngLatLike
 module Point = Mapbox__Point
 module PointLike = Mapbox__PointLike
+module Popup = Mapbox__Popup
 
 // @see https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker-instance-members
 module InstanceMember = (
@@ -15,8 +16,7 @@ module InstanceMember = (
   @send external getLngLat: T.t => LngLatLike.t = "getLngLat"
   @send external getOffset: T.t => PointLike.t = "getLngLat"
   @send external getPitchAlignment: T.t => string = "getPitchAlignment"
-  // TODO isn't implemented
-  // @send external getPopup: (T.t) => Popup.t = "getPopup"
+  @send external getPopup: (T.t) => Popup.t = "getPopup"
   @send external getRotation: T.t => float = "getRotation"
   @send external getRotationAlignment: T.t => string = "getRotationAlignment"
   @send external isDraggable: T.t => bool = "isDraggable"
@@ -25,8 +25,7 @@ module InstanceMember = (
   @send external setLngLat: (T.t, LngLatLike.t) => T.t = "setLngLat"
   @send external setOffset: (T.t, PointLike.t) => T.t = "setOffset"
   @send external setPitchAlignment: (T.t, string) => T.t = "setPitchAlignment"
-  // TODO isn't implemented
-  // @send external setPopup: (T.t, Popup.t) => T.t = "getPopup"
+  @send external setPopup: (T.t, Popup.t) => T.t = "getPopup"
   @send external setRotation: (T.t, float) => T.t = "setRotation"
   @send external setRotationAligment: (T.t, string) => T.t = "setRotationAligment"
   @send external togglePopup: T.t => T.t = "togglePopup"
