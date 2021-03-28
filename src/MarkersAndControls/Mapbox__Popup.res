@@ -67,5 +67,5 @@ external makeOptions: (
 @module("mapbox-gl") @new external makeWithOptions: options => t = "Popup"
 
 include InstanceMember({
-  type t = t
+  type nonrec t = t
 })
