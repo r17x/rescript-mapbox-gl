@@ -1,7 +1,5 @@
-type t = {
-  x: float,
-  y: float,
-}
+module Types = Mapbox__LngLat__Types
+type t = Types.point 
 // @see https://github.com/mapbox/point-geometry/blob/master/index.js
 module InstanceMember = (
   T: {
