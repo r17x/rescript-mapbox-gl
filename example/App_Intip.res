@@ -23,20 +23,23 @@ let useMap = (~lng, ~lat, ~zoom) => {
       )
 
     let _ = map->Belt.Option.map(Marker.make()->Marker.setLngLat(lngLat)->Marker.addTo)
+    let _ =
+      map
+      ->Belt.Option.map(
+        Map.addControl(
+          _,
+          GeolocateControl.makeWithOptions(
+            GeolocateControl.makeOptions(
+              ~positionOptions=GeolocateControl.positionOptions(~enableHighAccuracy=true, ()),
+              ~trackUserLocation=true,
+              (),
+            ),
+          ),
+        ),
+      )
+      ->Belt.Option.map(Map.addControlWithOptions(_, NavigationControl.make(), #topLeft))
 
-    /** TODO base on adiatma/intip-chrome
-    map.addControl(
-      new mapboxgl.GeolocateControl({
-        positionOptions: {
-          enableHighAccuracy: true,
-        },
-        trackUserLocation: true,
-      })
-    );
-
-    map.addControl(new mapboxgl.NavigationControl(), "top-left");
-    */
-    map->Belt.Option.map(Map.remove);
+    map->Belt.Option.map(Map.remove)
   }, (lng, lat, zoom, container))
   container
 }
@@ -46,4 +49,3 @@ let make = (~lng, ~lat, ~zoom, ~width, ~height) => {
   let mapContainer = useMap(~lng, ~lat, ~zoom)
   <div style={ReactDOM.Style.make(~width, ~height, ())} ref={ReactDOM.Ref.domRef(mapContainer)} />
 }
-

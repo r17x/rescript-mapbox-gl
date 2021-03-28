@@ -33,6 +33,16 @@ function useMap(lng, lat, zoom) {
           Belt_Option.map(map, (function (param) {
                   return partial_arg.addTo(param);
                 }));
+          Belt_Option.map(Belt_Option.map(map, (function (__x) {
+                      return __x.addControl(new MapboxGl.GeolocateControl({
+                                      positionOptions: {
+                                        enableHighAccuracy: true
+                                      },
+                                      trackUserLocation: true
+                                    }));
+                    })), (function (__x) {
+                  return __x.addControl(new MapboxGl.NavigationControl(), "topLeft");
+                }));
           return Belt_Option.map(map, (function (prim, prim$1) {
                         prim.remove();
                         
