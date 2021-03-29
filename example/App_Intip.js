@@ -6,7 +6,7 @@ var MapboxGl = require("mapbox-gl");
 var MapboxGl$1 = require("mapbox-gl").default;
 var Belt_Option = require("bs-platform/lib/js/belt_Option.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
-var MapboxGlCspWorkerJs = require("mapbox-gl/dist/mapbox-gl-csp-worker.js").default;
+var MapboxGlCspWorkerJs = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker.js").default;
 
 MapboxGl$1.workerClass = MapboxGlCspWorkerJs;
 

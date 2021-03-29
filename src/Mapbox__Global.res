@@ -9,7 +9,7 @@ if you have some custom workerClass e.g: import workerClass from 'xyz', so
 external customWorkerClass: unit => Mapbox.worker = "default"
 ```
 **/
-@module("mapbox-gl/dist/mapbox-gl-csp-worker.js")
+@module("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker.js")
 external mapboxGLWorker:  worker = "default"
 @get external getAccessToken: t => string = "accessToken"
 @set external setAccessToken: (t, string) => unit = "accessToken"
