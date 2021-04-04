@@ -2,6 +2,7 @@ type t;
 type worker; 
 @module("mapbox-gl")
 external mapbox: t = "default"
+external asWorker : 'a => worker = "%identity"
 /**
 if you have some custom workerClass e.g: import workerClass from 'xyz', so
 ```rescript

@@ -19,6 +19,6 @@ let mapMakeOptions = Map.makeOptions
 let mapWithOptions = Map.makeWithOptions
 /** Marker **/
 let marker = Marker.make
-let markerMakeOption = Marker.makeOptions
+let markerMakeOptions = Marker.makeOptions
 let markerWithOptions = Marker.makeWithOptions
 /** TODO alias make for another Module **/
