@@ -19,19 +19,32 @@ Run the following in your favorit console:
 > yarn add rescript-mapbox-gl
 ```
 ## TODO
-> 🏗 WIP, 🚧 Isn't implemented
+> Legend: 🏗 WIP,  🚧 Isn't implemented
    
 - [ ] [**Map**](https://docs.mapbox.com/mapbox-gl-js/api/map/) (🏗)
+  - [x] instance member (addControl,addControlWithOptions)
 - [ ] [**Properties and Options**](https://docs.mapbox.com/mapbox-gl-js/api/properties/) (🏗)
 - [ ] [**Markers and Control**](https://docs.mapbox.com/mapbox-gl-js/api/markers/) (🚧)
   - [x] Marker instance member 
   - [ ] Marker Event
   - [x] Popup instance member 
   - [ ] Popup Event
-- [ ] [**Geography and Geometry**](https://docs.mapbox.com/mapbox-gl-js/api/geography/) (🚧)
+- [x] [**Geography and Geometry**](https://docs.mapbox.com/mapbox-gl-js/api/geography/) (🏗)
+  - [x] LngLat instance member
+  - [x] LngLat static member
+  - [x] LngLatBounds instance member
+  - [x] LngLatBounds static member
+  - [x] LngLatLike 
+  - [x] LngLatBoundsLike
+  - [x] Point
+  - [x] PointLike
+  - [x] MercatorCoordinate instance member
+  - [x] MercatorCoordinate static member
+  - [x] EdgeInsets static member (1/3)
 - [ ] [**User interaction handlers**](https://docs.mapbox.com/mapbox-gl-js/api/handlers/) (🚧)
 - [ ] [**Sources**](https://docs.mapbox.com/mapbox-gl-js/api/sources/) (🚧)
 - [ ] [**Events**](https://docs.mapbox.com/mapbox-gl-js/api/events/) (🚧)
+
 
 ## Example
 
